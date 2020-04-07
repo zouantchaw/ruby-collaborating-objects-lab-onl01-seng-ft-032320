@@ -1,5 +1,6 @@
 class Artist 
   attr_accessor :name 
+  
   @@all = []
   
   def initialize(name)
@@ -23,6 +24,17 @@ class Artist
     Song.all.select{|song|
       song.artist == self
     }
+  end 
+  
+  def self.find_or_create_by_name(name)
+    self.all.each{|artist|
+      if (artist.name ==  name)
+        return artist
+      end 
+    }
+    artist = Artist.new(name)
+    artist 
+    
   end 
   
 end 
