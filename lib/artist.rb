@@ -5,4 +5,8 @@ class Artist
     @name = name 
   end 
   
+  def self.all 
+    @artist = []
+  end 
+  
 end 
