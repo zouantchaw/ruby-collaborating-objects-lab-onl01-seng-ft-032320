@@ -27,6 +27,14 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
+    # iterate over each Artist in self.all
+    #  if the Artist.name exists
+    #    return the Artist
+    #  else 
+    #    create a new Artist
+    #    assign the name to Artist.name 
+    #    return the newly created Artist
+    
     self.all.each{|artist|
       if (artist.name ==  name)
         return artist
