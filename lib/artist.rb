@@ -31,8 +31,7 @@ class Artist
     #  if the Artist.name exists
     #    return the Artist
     #  else 
-    #    create a new Artist
-    #    assign the name to Artist.name 
+    #    create a new Artist & assign the name to Artist.name
     #    return the newly created Artist
     
     self.all.each{|artist|
@@ -42,6 +41,12 @@ class Artist
     }
     artist = Artist.new(name)
     artist 
+  end 
+  
+  def print_songs 
+    self.songs.each{|song|
+      puts song.name 
+    }
   end 
   
 end 
